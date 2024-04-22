@@ -4,14 +4,14 @@
 
   <!-- 頻道模塊 -->
   <van-tabs>
-    <van-tab v-for="item in channelList.channels" :key="item.id" :title="item.name"></van-tab>
+    <van-tab v-for="item in channelList?.channels" :key="item.id" :title="item.name"></van-tab>
     <!-- {{channelList.channel}} -->
   </van-tabs>
 
   <!-- 視頻列表 -->
   <div class="vancard">
     <van-list v-model:loading="loading" :finished="finished" finished-text="沒有更多了" @load="onload">
-      <NuxtLink class="" v-for="item in list" :key="item.id" :to="`https://chateverywhere.app/zh/${item.name}`">
+      <NuxtLink class="" v-for="item in list" :key="item.id" :to="`/video/${item.id}`">
         <div style="height: 200px">
           {{ item.id }}
         </div>
@@ -61,7 +61,7 @@ const simulationAwait = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("");
-    }, 2000);
+    }, 20);
   })
 }
 
