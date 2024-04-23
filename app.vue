@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- 路由頁面 -->
-    <NuxtPage />
+    <!-- 最大緩存10級頁面 -->
+    <NuxtPage :keepalive="{ max: 10 }" />
   </div>
 </template>
 
@@ -14,8 +15,8 @@ useSeoMeta({
 })
 </script>
 
-<style >
-:root{
-  --van-primary-color:black;
+<style>
+:root {
+  --van-primary-color: black;
 }
 </style>

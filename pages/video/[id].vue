@@ -5,9 +5,9 @@
 
   <van-barrage v-model="barrageList" :auto-play="false" ref="barrageRef">
     <video
-      src="@/4b.mp4"
+      src="@/assets/4b.mp4"
       controls
-      poster="@/tt.jpg"
+      poster="@/assets/tt.jpg"
       class="videoStyle"
       @play="onplay"
       @pause="onpause"
