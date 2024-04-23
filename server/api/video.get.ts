@@ -1,7 +1,7 @@
 import video from "@/database/video";
 
-export default defineEventHandler(() => {
-    return {
-        video
-    }
+export default defineEventHandler((event) => {
+    const {id} = event.context.params || {};
+    // return video.find((v)=>v.name === id);
+    return {video};
 })
